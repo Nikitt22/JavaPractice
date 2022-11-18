@@ -5,7 +5,7 @@ public class Task2 {
 AirPlane airPlane = new AirPlane("Boing",2022,38,100000);
 airPlane.setLength(35);
 airPlane.setYear(2023);
-airPlane.fillUp(50000);
+airPlane.fillUp(80000);
 airPlane.fillUp(10000);
 airPlane.info();
     }

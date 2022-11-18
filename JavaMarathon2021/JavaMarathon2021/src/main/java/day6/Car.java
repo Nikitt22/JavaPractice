@@ -38,13 +38,9 @@ public class Car {
 
     int result = 0;
 
-    int yearDifference(int inputYear) {
-        if (inputYear > year)
-            result = inputYear - year;
-        else if (year > inputYear)
-            result = year - inputYear;
-        else result = 0;
-        System.out.println("Difference between years car: " + result);
+    public int yearDifference(int inputYear) {
+                   result = inputYear - year;
+           System.out.println("Difference between years car: " + Math.abs(result));
         return result;
 
     }

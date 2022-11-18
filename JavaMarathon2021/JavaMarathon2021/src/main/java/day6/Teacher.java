@@ -5,8 +5,8 @@ import java.util.Random;
 public class Teacher {
     private String name;
     private String subject;
-    int mark;
-    String markLetter;
+    private int mark;
+   public String markLetter;
     Random random = new Random();
 
     public Teacher(String name, String subject) {
@@ -23,6 +23,7 @@ public class Teacher {
     }
 
     public void evaluate(Student student) {
+
         mark = random.nextInt(5) + 2;
         if (mark == 2)
             markLetter = "Неудовлетворительно";
@@ -33,6 +34,8 @@ public class Teacher {
         else if (mark == 5)
             markLetter = "Отлично";
 
+        System.out.println("Преподаватель " + name + " оценила студента с именем " + student.getName() + " по предмету "
+                + subject + " на оценку " + markLetter);
 
     }
 

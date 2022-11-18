@@ -26,13 +26,9 @@ public class MotorBike {
         System.out.println("This is a motorbike");
     }
     int result=0;
-    int yearDifference(int inputYear){
-        if(inputYear>year)
+   public int yearDifference(int inputYear){
         result = inputYear-year;
-        else if (year>inputYear)
-            result=year-inputYear;
-        else result=0;
-        System.out.println("Difference between years motorbike: " + result);
+        System.out.println("Difference between years motorbike: " + Math.abs(result));
         return result;
     }
 }
