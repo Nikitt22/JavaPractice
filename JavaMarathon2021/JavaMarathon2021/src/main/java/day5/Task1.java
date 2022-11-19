@@ -9,7 +9,9 @@ public class Task1 {
     car.getColor();
     car.getModel();
     car.getYear();
-
+        System.out.println(car.getColor());
+        System.out.println(car.getModel());
+        System.out.println(car.getYear());
 
     }
 }
@@ -19,7 +21,7 @@ class Car{
     private  int year;
 
     public String getColor() {
-        System.out.println(color);
+
         return color;
     }
 
@@ -28,7 +30,7 @@ class Car{
     }
 
     public String getModel() {
-        System.out.println(model);
+
         return model;
     }
 
@@ -37,7 +39,7 @@ class Car{
     }
 
     public int getYear() {
-        System.out.println(year);
+
         return year;
     }
 

@@ -4,7 +4,7 @@ import java.util.Random;
 
 public class Task3 {
     public static void main(String[] args) {
-        int[][] array = new int[12][12];  // не получается сделать размерность [12][8], выдает ошибку ArrayIndexOutOfBoundsException, не могу понять почему
+        int[][] array = new int[12][8];  // не получается сделать размерность [12][8], выдает ошибку ArrayIndexOutOfBoundsException, не могу понять почему
         Random random = new Random();
         int countString1 = 0;
         int countString2 = 0;
