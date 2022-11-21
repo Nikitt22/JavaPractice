@@ -7,8 +7,11 @@ public class Player {
     private static int countPlayers = 0;
 
     Player(int stamina) {
+        this.stamina = stamina;
         countPlayers++;
-       }
+        if(countPlayers>6)
+            countPlayers=6;
+    }
 
     public int getStamina() {
         return stamina;
@@ -18,19 +21,23 @@ public class Player {
         return countPlayers;
     }
 
-    public int run(int stamina) {
+    public int run() {
         stamina--;
-        if (stamina == MIN_STAMINA)
+        if (stamina == MIN_STAMINA) {
             System.out.println("Игроку нужен отдых");
-        return stamina;
-    }
-
-    public void info() {
+            countPlayers--;}
+            return stamina;
+         }
+    public static void info() {
         int vacantPlace = 6 - countPlayers;
         if (countPlayers < 6)
             System.out.println("“Команды неполные. На поле еще есть " + vacantPlace + " свободных мест”");
         else if (countPlayers == 6) {
-            System.out.println("На поле нет свободных мест");
+            System.out.println("На поле нет свободных мест");}
+            else{
+            System.out.println("На поле не может быть больше 6 игроков");}
         }
+
     }
-}
+
+
