@@ -1,11 +1,11 @@
 package day8;
 
 public class AirPlane {
-    String manufacturer;
-    public int year;
-    public int length;
-    public int weight;
-    public int fuel;
+    private String manufacturer;
+    private int year;
+    private int length;
+    private int weight;
+    private int fuel;
 
 
     public AirPlane(String manufacturer, int year, int length, int weight) {
@@ -49,9 +49,21 @@ public class AirPlane {
         return fuel;
     }
 
-    public String toString(){
-       return "Изготовитель: " + manufacturer + " год выпуска: " + year + " длина: " + length + " вес: "
-               + weight;
+    public String toString() {
+        return "Изготовитель: " + manufacturer + " год выпуска: " + year + " длина: " + length + " вес: "
+                + weight;
 
     }
+
+    public int getLength() {
+        return length;
+    }
+
+    public static void compareAirplanes(AirPlane airPlane1, AirPlane airPlane2) {
+        if (airPlane1.getLength() > airPlane2.getLength())
+            System.out.println("Первый самолет длиннее");
+        else if ((airPlane1.getLength() < airPlane2.getLength()))
+            System.out.println("Второй самолет длинее");
+    }
+
 }

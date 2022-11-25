@@ -2,15 +2,14 @@ package day7;
 
 public class Player {
     private int stamina;
-    public static int MAX_STAMINA = 100;
-    public static int MIN_STAMINA = 0;
-    private static int countPlayers = 0;
+    private static int MAX_STAMINA = 100;
+    private static int MIN_STAMINA = 0;
+    private static int countPlayers;
 
     Player(int stamina) {
         this.stamina = stamina;
-        countPlayers++;
-        if(countPlayers>6)
-            countPlayers=6;
+          if(countPlayers<6)
+              countPlayers++;
     }
 
     public int getStamina() {
@@ -21,13 +20,14 @@ public class Player {
         return countPlayers;
     }
 
-    public int run() {
-        stamina--;
-        if (stamina == MIN_STAMINA) {
-            System.out.println("Игроку нужен отдых");
-            countPlayers--;}
-            return stamina;
-         }
+    public void run() {
+             if (stamina == MIN_STAMINA){
+            return;}
+                 stamina--;
+             if(stamina==0)
+                 countPlayers--;
+    }
+
     public static void info() {
         int vacantPlace = 6 - countPlayers;
         if (countPlayers < 6)

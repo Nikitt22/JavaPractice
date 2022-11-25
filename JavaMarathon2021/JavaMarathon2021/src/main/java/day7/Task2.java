@@ -11,7 +11,7 @@ public class Task2 {
         Player player4 = new Player(random.nextInt(100 - 90) + 90);
         Player player5 = new Player(random.nextInt(100 - 90) + 90);
         Player player6 = new Player(random.nextInt(100 - 90) + 90);
-        Player player7 = new Player(random.nextInt(100 - 90) + 90);
+       // Player player7 = new Player(random.nextInt(100 - 90) + 90);
 
 
                  while (player1.getStamina()!=0){
