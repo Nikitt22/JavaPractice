@@ -3,7 +3,7 @@ package day11.task1;
 
 public class Picker implements Worker {
     private int salary;
-   // private static final int TASK_SALARY = 80;
+    private static final int TASK_SALARY = 80;
     private boolean isPayed;
     private Warehouse warehouse;
 
@@ -26,7 +26,7 @@ public class Picker implements Worker {
 
       @Override
     public void doWork() {
-        salary += 80;
+        salary += TASK_SALARY;
         warehouse.incrementPickedOrders();
     }
 

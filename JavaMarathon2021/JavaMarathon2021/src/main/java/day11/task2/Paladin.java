@@ -1,6 +1,6 @@
 package day11.task2;
 
-public class Paladin extends Hero implements PhysAttack, Healer {
+public class Paladin extends Hero implements Healer {
 
     static final int MAX_HEALTH = 100;
     static final int HEAL_AMOUNT = 25;

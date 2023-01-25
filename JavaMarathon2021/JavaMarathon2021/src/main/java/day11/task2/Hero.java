@@ -1,10 +1,9 @@
 package day11.task2;
 
-public abstract class Hero implements PhysAttack, MagicAttack{
-int health = 100;
+public abstract class Hero implements PhysAttack {
+int health;
 final int HEALTH_MIN = 0;
     int physAtt;
-    int magicAtt;
     double physDef;
     double magicDef;
 
@@ -22,15 +21,7 @@ final int HEALTH_MIN = 0;
         }
     }
 
-    @Override
-    public void magicalAttack(Hero hero) {
-        double magicAttackScore = magicAtt * (1- hero.magicDef);
-        if (hero.health - magicAttackScore < HEALTH_MIN){
-            hero.health = HEALTH_MIN;
-        } else {
-            hero.health -= magicAttackScore;
-        }
-    }
+
 
 
 }

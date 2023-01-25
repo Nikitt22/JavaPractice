@@ -2,7 +2,7 @@ package day11.task1;
 
 public class Courier implements Worker {
     private int salary;
-   // private static final int TASK_SALARY = 100;
+   private static final int TASK_SALARY = 100;
     private boolean isPayed;
     private Warehouse warehouse;
 
@@ -27,7 +27,7 @@ public class Courier implements Worker {
 
     @Override
     public void doWork() {
-        salary += 100;
+        salary += TASK_SALARY;
         warehouse.incrementDeliveryOrders();
     }
 
