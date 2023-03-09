@@ -12,12 +12,7 @@ public class MessageDatabase {
     }
 
     public static List<Message> getMessages() {
-        List<Message> messagePrint = new ArrayList<>();
-        for (Message x : baseMessage) {
-            messagePrint.add(x);
-        }
-        System.out.println(messagePrint);
-        return messagePrint;
+        return baseMessage;
     }
 
     public static void showDialog(User u1, User u2) {

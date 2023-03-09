@@ -6,7 +6,7 @@ public class Message {
     private User sender;
     private User receiver;
     private  String text;
-    Date date;
+    private Date date;
 
     public Message(User sender, User receiver, String text) {
         this.sender = sender;
