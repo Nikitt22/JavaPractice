@@ -35,7 +35,7 @@ public class Task2 {
                 System.out.println("File not found");;
             }
             catch (NumberFormatException e){
-                System.out.println("Incorrect input file");
+                System.out.println(e.getMessage());
             }
     }
 }

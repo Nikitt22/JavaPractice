@@ -23,9 +23,7 @@ public class Task1 {
                 numbers.add(scanner.nextInt());
             scanner.close();
             System.out.println(numbers);
-        } catch (FileNotFoundException e) {
-            System.out.println("File not found");
-        }
+
 
         for (Integer x : numbers) {
             sum += x;
@@ -34,9 +32,13 @@ public class Task1 {
         if (numberOfDigits == 10)
             System.out.println("The sum of all numbers = " + sum);
         else {
-            System.out.println("Invalid incoming file");
+           throw new NumberFormatException("Invalid incoming file");
+
         }
-        System.out.println(numberOfDigits);
+        System.out.println(numberOfDigits);}
+        catch (FileNotFoundException e) {
+            System.out.println("File not found");
+        }
     }
 }
 

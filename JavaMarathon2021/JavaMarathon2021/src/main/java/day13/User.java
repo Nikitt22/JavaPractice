@@ -27,7 +27,7 @@ public class User {
     }
 
     public boolean isSubscribed(User user) {
-        return (subscriptions.contains(user));
+        return subscriptions.contains(user);
     }
         public boolean isFriend(User user) {
        return this.isSubscribed(user) && user.isSubscribed(this);
