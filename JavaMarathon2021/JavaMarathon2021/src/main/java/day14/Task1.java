@@ -29,12 +29,9 @@ public class Task1 {
             sum += x;
             numberOfDigits = x;
         }
-        if (numberOfDigits == 10)
+        if (numberOfDigits != 10) throw new NumberFormatException("Invalid incoming file");
             System.out.println("The sum of all numbers = " + sum);
-        else {
-           throw new NumberFormatException("Invalid incoming file");
 
-        }
         System.out.println(numberOfDigits);}
         catch (FileNotFoundException e) {
             System.out.println("File not found");
