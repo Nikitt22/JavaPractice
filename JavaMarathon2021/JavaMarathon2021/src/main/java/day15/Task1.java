@@ -6,7 +6,7 @@ import java.io.PrintWriter;
 import java.util.Scanner;
 
 public class Task1 {
-    public static void main(String[] args) throws RuntimeException {
+    public static void main(String[] args) {
         String pathShoes = "C:\\Projects\\JavaMarathon2021\\JavaPractice\\JavaMarathon2021\\JavaPractice\\JavaMarathon2021\\JavaMarathon2021\\src\\main\\resources\\shoes.csv";
         String pathSold = "C:\\Projects\\JavaMarathon2021\\JavaPractice\\JavaMarathon2021\\JavaPractice\\JavaMarathon2021\\JavaMarathon2021\\src\\main\\resources\\missing_shoes.txt";
         File file = new File(pathShoes);
@@ -29,7 +29,7 @@ public class Task1 {
             pw.close();
 
         } catch (FileNotFoundException e) {
-           //    throw new RuntimeException("File not found");
+            System.out.println("File not found");
         }
     }
 }

@@ -26,13 +26,10 @@ public class Task1 {
                 sumAverage = (sumAverage+x);
                 numberOfDigits++;}
              sumAverage = sumAverage/numberOfDigits;
-            System.out.println(numberOfDigits);
-            System.out.format("%.3f", sumAverage);
-            System.out.println();
-            System.out.println(sumAverage);
+            System.out.printf(numberOfDigits + "\n" + "%.3f", sumAverage);
 
         } catch (FileNotFoundException e) {
-            throw new RuntimeException(e);
+            System.out.println("File not found");;
         }
     }
 }

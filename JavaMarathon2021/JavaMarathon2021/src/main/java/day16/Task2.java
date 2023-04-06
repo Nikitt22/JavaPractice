@@ -6,7 +6,7 @@ import java.io.PrintWriter;
 import java.util.*;
 
 public class Task2 {
-    public static void main(String[] args) throws FileNotFoundException {
+    public static void main(String[] args) {
         float sum = 0;
 
         File file = new File("C:\\Projects\\JavaMarathon2021\\JavaPractice\\JavaMarathon2021\\JavaPractice\\FILE1");
@@ -17,8 +17,16 @@ public class Task2 {
             array[i] = random.nextInt(100);
         }
 
-        PrintWriter pw = new PrintWriter(file);
-        PrintWriter pw2 = new PrintWriter(file2);
+        PrintWriter pw = null;
+        PrintWriter pw2 = null;
+
+        try {
+            pw = new PrintWriter(file);
+            pw2 = new PrintWriter(file2);
+        } catch (FileNotFoundException e) {
+            System.out.println("Не удалось создать файл");
+        }
+
         for (int j : array) pw.print(j + " ");
         pw.close();
 
@@ -29,7 +37,11 @@ public class Task2 {
             }
             pw2.close();
         }
-        printResult(file2);
+        try {
+            printResult(file2);
+        } catch (FileNotFoundException e) {
+            System.out.println("Не удалось создать файл");;
+        }
     }
 
     public static void printResult(File file2) throws FileNotFoundException {
