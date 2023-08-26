@@ -14,7 +14,6 @@ public class Task1 {
     public static void main(String[] args) {
         File file = new File("C:\\Projects\\JavaMarathon2021\\JavaPractice\\JavaMarathon2021\\JavaPractice\\JavaMarathon2021\\JavaMarathon2021\\src\\main\\resources\\dushi.txt");
         countWords(file);
-
     }
 
     public static void countWords(File file) {
